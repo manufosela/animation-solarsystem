@@ -18,6 +18,14 @@ npm i animation-solarsystem
 <animation-solarsystem></animation-solarsystem>
 ```
 
+## Atributes
+
+- **radio-base**: oribit radio base from earth. To show all planets use 18, to show inter planets use 350
+- **width**: width of the svg
+- **height**: height of the svg
+- **radio-plantet-base**: radio base from earth. If you show all planets use 4, to show inter planets use 10
+- **period-plantet-base**: period base from earth. Seconds to do a rotation.
+
 ## Linting and formatting
 
 To scan the project for linting and formatting errors, run
@@ -59,7 +67,6 @@ To build a production version of Storybook, run
 ```bash
 npm run storybook:build
 ```
-
 
 ## Tooling configs
 
