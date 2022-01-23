@@ -13,6 +13,7 @@ export class AnimationSolarsystem extends LitElement {
       height: { type: Number, attribute: "height", reflect: true  },
       radioPlantetBase: { type: Number, attribute: "radio-planet-base", reflect: true  },
       periodPlantetBase: { type: Number, attribute: "period-planet-base", reflect: true  },
+      showStarsBg: { type: Boolean, attribute: "show-stars-bg", reflect: true  }
     };
   }
 
@@ -26,6 +27,7 @@ export class AnimationSolarsystem extends LitElement {
     this.height = 1800;
     this.radioPlantetBase = 4;  // ALL: 4, Interior: 10
     this.periodPlantetBase = 60; // seg
+    this.showStarsBg = false;
     
     this.planetsData = {
       mercurio: { rp: 0.36, ro: 0.38, po: 4.15, color: "gray" },
@@ -39,14 +41,10 @@ export class AnimationSolarsystem extends LitElement {
     };
   }
 
-  updated(changedProperties) {
-
-  }
-
   firstUpdated() {
     this.cx = this.width / 2;
     this.cy = this.height / 2;
-    this.putStars();
+    if (this.showStarsBg) this.putStars();
     this.svg = this.shadowRoot.querySelector("#mySVG");
     this.svg.setAttribute("width", this.width);
     this.svg.setAttribute("height", this.height);
@@ -56,10 +54,6 @@ export class AnimationSolarsystem extends LitElement {
     Object.keys(this.planetsData).forEach((planetName) => {
       this.createPlanetaryOrbit(planetName, this.planetsData[planetName]);
     });
-
-    // svg.setAttribute("viewBox", `0 0 ${maxSize*2} ${maxSize*2}`);
-    // svg.setAttribute("width", `${maxSize}px`);
-    // svg.setAttribute("height", `${maxSize}px`);
   } 
     
   createPlanetaryOrbit(planetName, planetData) {

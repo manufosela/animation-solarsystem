@@ -8,13 +8,14 @@ export const AnimationSolarsystemStyles = css`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    --animation-solarsystem-bg-stars-image: linear-gradient(to top, #000033, #222255);
   }
 
   main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to top, #000033, #222255);
+    background-image: var(--animation-solarsystem-bg-stars, linear-gradient(to top, #000033, #222255));
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;

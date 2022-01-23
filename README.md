@@ -18,6 +18,10 @@ npm i animation-solarsystem
 <animation-solarsystem></animation-solarsystem>
 ```
 
+## Styling
+
+- **--animation-solarsystem-bg-stars-image**: Background image for the stars. By default use a `linear-gradient(to top, #000033, #222255);`
+
 ## Atributes
 
 - **radio-base**: oribit radio base from earth. To show all planets use 18, to show inter planets use 350
@@ -25,6 +29,7 @@ npm i animation-solarsystem
 - **height**: height of the svg
 - **radio-plantet-base**: radio base from earth. If you show all planets use 4, to show inter planets use 10
 - **period-plantet-base**: period base from earth. Seconds to do a rotation.
+- **show-stars-bg**: show background stars if true
 
 ## Linting and formatting
 

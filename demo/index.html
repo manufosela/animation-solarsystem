@@ -11,6 +11,11 @@
       }
 
       animation-solarsystem {
+        --animation-solarsystem-bg-stars-image: linear-gradient(
+          to top,
+          #000033,
+          #222255
+        );
       }
     </style>
   </head>
@@ -34,6 +39,7 @@
             height="1100"
             radio-planet-base="15"
             period-planet-base="15"
+            show-stars-bg="true"
           ></animation-solarsystem>
         `,
         document.querySelector('#demo')
@@ -52,6 +58,7 @@
           animationSolarsystem.setAttribute('period-planet-base', '15');
           animationSolarsystem.setAttribute('width', '1200');
           animationSolarsystem.setAttribute('height', '1100');
+          animationSolarsystem.setAttribute('show-stars-bg', 'true');
           document.querySelector('h1').innerText = 'Inner planets';
           document.querySelector('animation-solarsystem').remove();
           document.querySelector('#demo').appendChild(animationSolarsystem);
@@ -66,6 +73,7 @@
           animationSolarsystem.setAttribute('period-planet-base', '15');
           animationSolarsystem.setAttribute('width', '2000');
           animationSolarsystem.setAttribute('height', '1800');
+          animationSolarsystem.setAttribute('show-stars-bg', 'true');
           document.querySelector('h1').innerText = 'All Solar system';
           document.querySelector('animation-solarsystem').remove();
           document.querySelector('#demo').appendChild(animationSolarsystem);
